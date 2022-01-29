@@ -16,6 +16,11 @@ from sklearn.metrics import r2_score
 def predict_cancer(neuronas , epocas , optimizador):
     admissions = pd.read_excel('Datos_Cancer.xlsx')
     datos = admissions.values
+     
+
+
+
+     
     datos_robust_scaler = preprocessing.RobustScaler().fit_transform(datos)
     datos_robust_scaler
     entrada = datos_robust_scaler[:, 1:31]
